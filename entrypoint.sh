@@ -20,8 +20,8 @@ if [ -n "${INPUT_TOKEN}" ] ; then
 fi
 
 output=$(firebase \
-        crashlytics:dsymbols:upload \        
-        --app "$INPUT_APPID" \
+        crashlytics:symbols:upload \        
+        --app=$INPUT_APPID" \
         "$INPUT_FILE")
 
 status=$?
