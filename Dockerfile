@@ -6,9 +6,7 @@ COPY . /app
 RUN apk update \
     && apk add bash git g++ make python3 \
     && yarn global add firebase-tools \
-    && apk install -y openjdk-8-jdk \
-    && apk install -y ant\
-    && apk clean;    
+    && yarn add java
 
 # Setup JAVA_HOME
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
