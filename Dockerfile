@@ -4,9 +4,10 @@ WORKDIR /app
 COPY . /app
 
 RUN apk update \
-    && apk add bash git g++ make python3 \
-    && apk add openjdk8 \
-    && yarn global add firebase-tools \
+    && apk add bash git g++ make python3 \    
+    && yarn global add firebase-tools
+
+RUN apk add openjdk8
 
 RUN chmod +x /app/entrypoint.sh
 
