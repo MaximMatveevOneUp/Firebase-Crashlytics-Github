@@ -22,7 +22,7 @@ fi
 output=$(firebase \
         crashlytics:symbols:upload \
         --app="$INPUT_APPID" \
-        "$INPUT_FILE" '--debug')
+        "$INPUT_FILE" '--debug' '--dry-run')
 
 status=$?
 
