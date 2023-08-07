@@ -4,7 +4,8 @@ WORKDIR /app
 COPY . /app
 
 RUN apk update \
-    && apk add bash git g++ make python3 
+    && apk add bash git g++ make python3 \
+    && apk add curl
 
 RUN curl -sL https://firebase.tools | upgrade=true bash    
 
