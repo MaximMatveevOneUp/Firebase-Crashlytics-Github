@@ -7,7 +7,7 @@ RUN apk update \
     && apk add bash git g++ make python3 \    
     && yarn global add firebase-tools
 
-RUN apk add openjdk20
+RUN apk add openjdk
 
 RUN chmod +x /app/entrypoint.sh
 
